@@ -1,0 +1,16 @@
+version: "3.0"
+services:
+  spring_boot_poll_service:
+    image: poll-service:latest
+    container_name: poll-service
+    ports:
+      - "8082:8082"
+    volumes:
+      - /etc/hosts:/etc/hosts
+    environment:
+      DB_HOST: 0.0.0.0
+      DB_PORT: 5432
+    network_mode: host
+#    build:
+#      context: ./
+#      dockerfile: 'Dockerfile'

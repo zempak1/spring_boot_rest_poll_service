@@ -1,0 +1,8 @@
+alter table answer drop constraint nswer_questionID_questions_id_fk;
+alter table answer drop constraint answer_pollID_polls_id_fk;
+alter table answer drop constraint answer_personID_persons_id_fk;
+alter table answers_answer_variants drop constraint answers_answer_variants_answerID_answer_id_fk;
+alter table answers_answer_variants drop constraint answers_answer_variants_answerVariantId_answer_variants_id_fk;
+
+drop table answer;
+drop table answers_answer_variants;
